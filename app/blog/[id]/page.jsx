@@ -4,6 +4,7 @@ import { assets, blog_data } from "@/Assets/assets";
 import Image from "next/image";
 import Footer from "@/Components/footer";
 import Link from "next/link";
+import axios from "axios";
 
 
 const page = ({ params: paramsPromise }) => {
@@ -14,14 +15,12 @@ const page = ({ params: paramsPromise }) => {
         // Params is now a Promise, so await it
         const params = await paramsPromise;
         
-        // Simulate fetching data based on params.id
-        for(let i=0; i<blog_data.length; i++){
-            if(Number(params.id) === blog_data[i].id){
-                setData(blog_data[i]);
-                
-                console.log(blog_data[i]);
-                break;
-            }
+        // Fetch from database
+        try {
+            const response = await axios.get(`/api/Blog?id=${params.id}`);
+            setData(response.data.blog);
+        } catch (error) {
+            console.error("Error fetching blog:", error);
         }
     }
 
