@@ -33,9 +33,9 @@ const page = ({ params: paramsPromise }) => {
         <div className='bg-gray-200 py-5 px-5 md:px-12 lg:px-28'>
             <div className='flex justify-between items-center'>
                <Link href="/"><Image src={assets.logo} width={180} alt="" className='w-130px sm:w-auto' /></Link>
-                <button className='flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 border border-solid border-black shadow-[-7px_7px_0px_#000]'>
-                    Get Started <Image src={assets.arrow} alt=''/>
-                </button>
+
+                <Link href="/admin">
+                                <button className='flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 border border-solid border-black shadow-[-7px_7px_0px_#000] cursor-pointer'>Get Started <Image src={assets.arrow} alt=''/></button></Link>
 
             </div>
             <div className='text-center my-24'>
@@ -49,7 +49,8 @@ const page = ({ params: paramsPromise }) => {
          <div className='mx-5 max-w-[800] md:mx-auto mt-[-70px] mb-10'>
             <Image src={data.image} alt='' width={1280} height={720} className='border border-black shadow-[-7px_7px_0px_#000]'/>
             <h1 className='my-8 text-[26px] font-semibold'>Introduction:</h1>
-            <p>{data.description}</p>
+            
+            <div className='post-content' dangerouslySetInnerHTML={{__html:data.description}}></div>
             <div className='my-24'>
                 <p className='text-black font-semibold my-4'>Share this article on:</p>
                 <div className='flex'>
