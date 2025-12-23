@@ -24,11 +24,11 @@ const page = () => {
     }
 
     return (
-        <div className='flex-1 pt-5 px-5 sm:pt-12 pl-16'>
-            <h1 className='text-xl font-bold'>All Blogs</h1>
-            <div className='relative h-[80vh] max-w-[850px] overflow-x-auto mt-4 border border-black scrollbar-hide'>
+        <div className='flex-1 pt-5 px-5 sm:pt-12 pl-16 bg-[#121316]'>
+            <h1 className='text-xl font-bold text-[#9e7a3d]'>All Blogs</h1>
+            <div className='relative h-[80vh] max-w-[850px] overflow-x-auto mt-4 border border-[#9e7a3d] scrollbar-hide'>
                 <table className='w-full text-sm text-gray-700'>
-                    <thead className='text-sm text-gray-900 text-left bg-gray-200 border-b border-black uppercase'>
+                    <thead className='text-sm text-[#9e7a3d] text-left bg-[#121316] border-b border-[#9e7a3d] uppercase'>
                         <tr>
                             <th className='hidden sm:block p-2' scope="col">Author Name</th>
                             <th className='p-2' scope="col">Post Title</th>

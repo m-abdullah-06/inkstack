@@ -17,13 +17,13 @@ const subscriptiontableitem = ({email, date, deleteEmails, id}) => {
     };
     return (
 
-        <tr className='bg-white border-b text-left'>
+        <tr className='bg-[#121316] border-b text-left'>
 
-            <th scope='row' className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap'>
+            <th scope='row' className='px-6 py-4 font-medium text-[#9e7a3d] whitespace-nowrap'>
                 {email?email:"No Email"}
             </th>
-            <td className='px-6 py-4 text-sm text-gray-900 hidden sm:block'>{formatDate(date)}</td>
-            <td className='px-6 py-4 text-sm text-gray-900 cursor-pointer' onClick={()=>deleteEmails(id)} >x</td>
+            <td className='px-6 py-4 text-sm text-[#c4b7a5] hidden sm:block'>{formatDate(date)}</td>
+            <td className='px-6 py-4 text-sm text-[#9e7a3d] cursor-pointer' onClick={()=>deleteEmails(id)} >x</td>
         </tr>
 
 

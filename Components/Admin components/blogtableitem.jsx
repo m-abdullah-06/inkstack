@@ -23,14 +23,14 @@ const BlogItemTable = ({author, deleteBlog, id}) => {
     return (
         <>
             {blogs.map((blog) => (
-                <tr key={blog._id} className='border-b border-gray-300 hover:bg-gray-100'>
-                    <th scope="row" className='items-center gap-3 hidden sm:flex px-6 py-4 font-medium text-gray-900 whitespace-nowrap'>
+                <tr key={blog._id} className='border-b border-[#9e7a3d]'>
+                    <th scope="row" className='items-center gap-3 hidden sm:flex px-6 py-4 font-medium text-[#9e7a3d] whitespace-nowrap'>
                         <Image src={blog.author_img || assets.profile_icon} alt="" width={40} height={40} className='rounded-full'/>
                         <p>{author?author:"No Author"}</p>
                     </th>
-                    <td className='px-6 py-4 text-sm text-gray-900'>{blog.title || "No Title"}</td>
-                    <td className='px-6 py-4 text-sm text-gray-900'>{new Date(blog.date).toLocaleDateString()}</td>
-                    <td className='px-6 py-4 text-sm text-gray-900 cursor-pointer' onClick={() => deleteBlog(blog._id)}>x</td>
+                    <td className='px-6 py-4 text-sm text-[#c4b7a5]'>{blog.title || "No Title"}</td>
+                    <td className='px-6 py-4 text-sm text-[#c4b7a5]'>{new Date(blog.date).toLocaleDateString()}</td>
+                    <td className='px-6 py-4 text-sm text-[#9e7a3d] cursor-pointer' onClick={() => deleteBlog(blog._id)}>x</td>
                 </tr>
             ))}
         </>

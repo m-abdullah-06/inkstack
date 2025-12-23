@@ -68,26 +68,26 @@ const [data, setData] = useState({
 
     }
     return (
-        <>
+        <div className='bg-[#121316]'>
         <form onSubmit={onSubmitHandler} className='pt-5 px-5 sm:pt-12 pl-16'>
-            <p className='text-xl'>Upload Thumbnail</p>
+            <p className='text-xl font-bold text-[#9e7a3d]'>Upload Thumbnail</p>
             <label htmlFor="image">
-                <Image className='mt-4' src={!image?assets.upload_area:URL.createObjectURL(image)} width={140} height={70} alt=""/>
+                <Image className='mt-4' src={!image?assets.upload_area:URL.createObjectURL(image)} width={100} height={70} alt=""/>
             </label>
             <input onChange={(e)=>setImage(e.target.files[0])} type="file" id="image" hidden required/>
-            <p className='text-xl mt-4'>Post Title</p>
-            <input name='title' onChange={onChnageHandler} value={data.title} className='w-full sm:w-[500px] mt-4 px-4 py-3 border' type="text" placeholder="Enter Post Title" required/>
-            <p className='text-xl mt-4'>Author Name</p>
-            <input name='author' onChange={onChnageHandler} value={data.author} className='w-full sm:w-[500px] mt-4 px-4 py-3 border' type="text" placeholder="Enter Author Name" required/>
-            <p className='text-xl mt-4'>Author Image</p>
+            <p className='text-xl mt-4 text-[#9e7a3d]'>Post Title</p>
+            <input name='title' onChange={onChnageHandler} value={data.title} className='w-full sm:w-[500px] mt-4 px-4 py-3 border border-[#9e7a3d] rounded placeholder-[#9e7a3d]' type="text" placeholder="Enter Post Title" required/>
+            <p className='text-xl mt-4 text-[#9e7a3d]'>Author Name</p>
+            <input name='author' onChange={onChnageHandler} value={data.author} className='w-full sm:w-[500px] mt-4 px-4 py-3 border border-[#9e7a3d] rounded placeholder-[#9e7a3d]' type="text" placeholder="Enter Author Name" required/>
+            <p className='text-xl mt-4 text-[#9e7a3d]'>Author Image</p>
             <label htmlFor="author_img">
                 <Image className='mt-4' src={!authorImage?assets.profile_icon:URL.createObjectURL(authorImage)} width={100} height={100} alt=""/>
             </label>
             <input onChange={handleAuthorImageChange} type="file" id="author_img" hidden required/>
-            <p className='text-xl mt-4'>Post Description</p>
-            <textarea name='description' onChange={onChnageHandler} value={data.description} className='w-full sm:w-[500px] mt-4 px-4 py-3 border' type="text" placeholder="Enter Post Description" rows={7} required/>
-            <p className='text-xl mt-4'>Post Category</p>
-            <select name="category" onChange={onChnageHandler} value={data.category} className='w-full sm:w-[500px] mt-4 px-4 py-3 border'>
+            <p className='text-xl mt-4 text-[#9e7a3d]'>Post Description</p>
+            <textarea name='description' onChange={onChnageHandler} value={data.description} className='w-full sm:w-[500px] mt-4 px-4 py-3 border border-[#9e7a3d] rounded placeholder-[#9e7a3d]' type="text" placeholder="Enter Post Description" rows={7} required/>
+            <p className='text-xl mt-4 text-[#9e7a3d]'>Post Category</p>
+            <select name="category" onChange={onChnageHandler} value={data.category} className='w-full sm:w-[500px] mt-4 px-4 py-3 border border-[#9e7a3d] rounded text-[#9e7a3d]'>
                 <option value="">Select Category</option>
                 <option value="technology">Technology</option>
                 <option value="startup">Startup</option>
@@ -95,10 +95,10 @@ const [data, setData] = useState({
                 <option value="nature">Nature</option>
                 <option value="music">Music</option>
             </select><br/>
-            <button type="submit" className='mt-8 w-40 h-12 bg-black text-white cursor-pointer'>Add Post</button>
+            <button type="submit" className='mt-8 w-40 h-12 bg-[#9e7a3d] text-white cursor-pointer rounded-md hover:bg-[#8a6a2d] transition-colors duration-300'>Add Post</button>
         </form>
 
-        </>)
+        </div>)
 
 }
 

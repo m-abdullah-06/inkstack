@@ -45,11 +45,11 @@ const Page = () => {
     }, []);
     
     return (
-        <div className='flex-1 pt-5 px-5 sm:pt-12 pl-16'>
-            <h1 className='text-xl font-bold'>All Subscriptions</h1>
-            <div className='relative max-w-[600px] h-[80vh] overflow-x-auto mt-4 border border-black scrollbar-hide'>
-                <table className='w-full text-sm text-gray-700'>
-                    <thead className='text-sm text-left text-gray uppercase bg-gray-200'>
+        <div className='flex-1 pt-5 px-5 sm:pt-12 pl-16 bg-[#121316]'>
+            <h1 className='text-xl font-bold text-[#9e7a3d]'>All Subscriptions</h1>
+            <div className='relative max-w-[600px] h-[80vh] overflow-x-auto mt-4 border border-[#9e7a3d] scrollbar-hide'>
+                <table className='w-full text-sm text-[#9e7a3d]'>
+                    <thead className='text-sm text-left text-[#9e7a3d] uppercase bg-[#121316]'>
                         <tr>
                             <th className='p-2 border-b border-black' scope="col">Email</th>
                             <th className='p-2 border-b border-black hidden sm:block' scope="col">Subscribed On</th>
